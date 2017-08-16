@@ -4,6 +4,7 @@ A template for genetic algorithm
 ### References
 [Genetic algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm)  
 [Fitness function](https://en.wikipedia.org/wiki/Fitness_function)  
+[Genetic operator](https://en.wikipedia.org/wiki/Genetic_operator)  
 [Crossover](https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm))  
 [Mutation](https://en.wikipedia.org/wiki/Mutation_(genetic_algorithm))  
 [Selection](https://en.wikipedia.org/wiki/Selection_(genetic_algorithm))  
