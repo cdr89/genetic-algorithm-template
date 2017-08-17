@@ -25,9 +25,9 @@ public class Main {
 				.withSelection(new TournamentSelection<>(4)) // Selection algorithm
 				.withFitness(fitness) // Fitness function implementation
 				.withOutputPrinter(new StandardOutputPrinter<>(fitness)) // Use a standar printer (optional)
-				.build(); // build the instance!
+				.build(); // Build the instance!
 
-		geneticAlgorithm.run();
+		geneticAlgorithm.run(); // Run the algorithm!
 	}
 
 }
