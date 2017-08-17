@@ -14,7 +14,7 @@
 		<dependency>
 			<groupId>it.caldesi</groupId>
 			<artifactId>genetic-algorithm-template</artifactId>
-			<version>1.0.1</version>
+			<version>RELEASE</version>
 		</dependency>
 	</dependencies>
 

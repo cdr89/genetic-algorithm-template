@@ -39,4 +39,16 @@ public class StandardOutputPrinter<T> extends OutputPrinter<T> {
 		}
 	}
 
+	@Override
+	public void onFinish() {
+		super.onFinish();
+
+		long second = (executionTime / 1000) % 60;
+		long minute = (executionTime / (1000 * 60)) % 60;
+		long hour = (executionTime / (1000 * 60 * 60)) % 24;
+
+		String time = String.format("%02dh %02dmin %02ds %dms", hour, minute, second, executionTime);
+		System.out.println("Execution time: " + time);
+	}
+
 }

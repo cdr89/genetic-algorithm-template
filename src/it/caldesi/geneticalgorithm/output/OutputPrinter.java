@@ -7,9 +7,19 @@ import it.caldesi.geneticalgorithm.population.Population;
 public abstract class OutputPrinter<T> {
 
 	protected Fitness<T> fitness;
+	protected long startTime;
+	protected long executionTime = -1;
 
 	public OutputPrinter(Fitness<T> fitness) {
 		this.fitness = fitness;
+	}
+
+	public void onStart() {
+		startTime = System.currentTimeMillis();
+	}
+
+	public void onFinish() {
+		executionTime = System.currentTimeMillis() - startTime;
 	}
 
 	public abstract void onInitialization(Population<T> population, Chromosome<T> mostFitChromosome);

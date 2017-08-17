@@ -30,6 +30,7 @@ public class GeneticAlgorithm<T> {
 	}
 
 	public void run() {
+		outputPrinter.onStart();
 		int generation = 0;
 
 		Population<T> population = new Population<T>(populationSize);
@@ -51,6 +52,7 @@ public class GeneticAlgorithm<T> {
 			if (outputPrinter != null)
 				outputPrinter.forEachGeneration(generation, population, mostFitChromosome);
 		}
+		outputPrinter.onFinish();
 	}
 
 	private void initializePopulation(Population<T> population) {
