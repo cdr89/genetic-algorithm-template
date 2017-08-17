@@ -16,16 +16,16 @@ public class Main {
 
 		GeneticAlgorithm.Builder<Character> builder = new GeneticAlgorithm.Builder<Character>();
 		GeneticAlgorithm<Character> geneticAlgorithm = builder //
-				.withChromosomeSize(target.length()) //
-				.withCrossover(new UniformCrossover<>()) //
-				.withEliteIndividuals(1) //
-				.withMutation(new UniformMutation<>(randomGene, 0.5)) //
-				.withPopulationSize(10) //
-				.withRandomGene(randomGene) //
-				.withSelection(new TournamentSelection<>(4)) //
-				.withFitness(fitness) //
-				.withOutputPrinter(new StandardOutputPrinter<>(fitness)) //
-				.build();
+				.withChromosomeSize(target.length()) // How many genes must have each chromosome
+				.withCrossover(new UniformCrossover<>()) // The type of crossover
+				.withEliteIndividuals(1) // Elite individuals to "save" for each generation
+				.withMutation(new UniformMutation<>(randomGene, 0.5)) // Mutation algorithm
+				.withPopulationSize(10) // Size of the population for each generation
+				.withRandomGene(randomGene) // The RandomGene implementation
+				.withSelection(new TournamentSelection<>(4)) // Selection algorithm
+				.withFitness(fitness) // Fitness function implementation
+				.withOutputPrinter(new StandardOutputPrinter<>(fitness)) // Use a standar printer (optional)
+				.build(); // build the instance!
 
 		geneticAlgorithm.run();
 	}
