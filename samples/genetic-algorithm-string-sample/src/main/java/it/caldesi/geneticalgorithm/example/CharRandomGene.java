@@ -11,7 +11,7 @@ public class CharRandomGene extends RandomGene<Character> {
 			'V', 'W', 'X', 'Y', 'Z' };// uppercase
 
 	@Override
-	public Character getRandomGene() {
+	public Character getRandomGene(int geneIndex) {
 		return ALPHABET[(int) Math.round((ALPHABET.length - 1) * Math.random())];
 	}
 

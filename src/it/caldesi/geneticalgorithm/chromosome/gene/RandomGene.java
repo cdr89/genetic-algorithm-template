@@ -9,10 +9,10 @@ public abstract class RandomGene<T> {
 	public void initRandomly(Chromosome<T> chromosome) {
 		List<T> genes = chromosome.genes;
 		for (int i = 0; i < genes.size(); i++) {
-			genes.set(i, getRandomGene());
+			genes.set(i, getRandomGene(i));
 		}
 	}
 
-	public abstract T getRandomGene();
+	public abstract T getRandomGene(int geneIndex);
 
 }

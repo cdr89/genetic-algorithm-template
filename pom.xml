@@ -5,7 +5,7 @@
 
 	<groupId>it.caldesi</groupId>
 	<artifactId>genetic-algorithm-template</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 	<name>Genetic Algorithm Template</name>
 	<description>A template for genetic algorithm</description>

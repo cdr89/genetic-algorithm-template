@@ -22,6 +22,10 @@ public abstract class OutputPrinter<T> {
 		executionTime = System.currentTimeMillis() - startTime;
 	}
 
+	public long getExecutionTime() {
+		return executionTime;
+	}
+
 	public abstract void onInitialization(Population<T> population, Chromosome<T> mostFitChromosome);
 
 	public abstract void forEachGeneration(int generation, Population<T> population, Chromosome<T> mostFitChromosome);

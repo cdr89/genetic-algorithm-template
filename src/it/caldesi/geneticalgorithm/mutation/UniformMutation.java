@@ -20,7 +20,7 @@ public class UniformMutation<T> extends Mutation<T> {
 			mutateChromosome = new Chromosome<>(chromosome.genes.size());
 			for (int i = 0; i < chromosome.genes.size(); i++) {
 				if (Math.random() < mutationRate) {
-					mutateChromosome.genes.set(i, randomGene.getRandomGene());
+					mutateChromosome.genes.set(i, randomGene.getRandomGene(i));
 				} else {
 					mutateChromosome.genes.set(i, chromosome.genes.get(i));
 				}
