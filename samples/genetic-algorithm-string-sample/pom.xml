@@ -5,7 +5,7 @@
 
 	<groupId>it.caldesi.geneticalgorithm.samples</groupId>
 	<artifactId>genetic-algorithm-string-sample</artifactId>
-	<version>1.0</version>
+	<version>1.0.1</version>
 
 	<name>Genetic Algorithm String Sample</name>
 	<description>An example of use of the genetic-algorithm-template with strings</description>
@@ -14,7 +14,7 @@
 		<dependency>
 			<groupId>it.caldesi</groupId>
 			<artifactId>genetic-algorithm-template</artifactId>
-			<version>1.0</version>
+			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
 

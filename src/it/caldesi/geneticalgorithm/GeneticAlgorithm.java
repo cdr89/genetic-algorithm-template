@@ -7,6 +7,7 @@ import it.caldesi.geneticalgorithm.chromosome.gene.RandomGene;
 import it.caldesi.geneticalgorithm.crossover.Crossover;
 import it.caldesi.geneticalgorithm.fitness.Fitness;
 import it.caldesi.geneticalgorithm.mutation.Mutation;
+import it.caldesi.geneticalgorithm.output.OutputPrinter;
 import it.caldesi.geneticalgorithm.population.Population;
 import it.caldesi.geneticalgorithm.selection.Selection;
 
@@ -17,10 +18,13 @@ public class GeneticAlgorithm<T> {
 	private Selection<T> selection;
 	private RandomGene<T> randomGene;
 
+	private Fitness<T> fitness;
+
 	private int chromosomeSize;
 	private int populationSize;
 	private int eliteIndividuals;
-	private Fitness<T> fitness;
+
+	private OutputPrinter<T> outputPrinter;
 
 	private GeneticAlgorithm() {
 	}
@@ -29,15 +33,13 @@ public class GeneticAlgorithm<T> {
 		int generation = 0;
 
 		Population<T> population = new Population<T>(populationSize);
-		initializePopulation(population, randomGene);
+		initializePopulation(population);
 		sortChromosomesByFitness(population);
 
 		Chromosome<T> mostFitChromosome = population.chromosomes[0];
 
-		System.out.println(
-				"Generation #" + generation + " most fit chromosome: " + fitness.calcFitness(mostFitChromosome));
-		printPopulation(population);
-		System.out.println("-------------------------------------------------------");
+		if (outputPrinter != null)
+			outputPrinter.onInitialization(population, mostFitChromosome);
 
 		while (fitness.calcFitness(mostFitChromosome) < fitness.getTargetFitness()) {
 			generation++;
@@ -46,14 +48,12 @@ public class GeneticAlgorithm<T> {
 			sortChromosomesByFitness(population);
 			// take the most fit individual
 			mostFitChromosome = population.chromosomes[0];
-			System.out.println(
-					"Generation #" + generation + " most fit chromosome: " + fitness.calcFitness(mostFitChromosome));
-			printPopulation(population);
-			System.out.println("-------------------------------------------------------");
+			if (outputPrinter != null)
+				outputPrinter.forEachGeneration(generation, population, mostFitChromosome);
 		}
 	}
 
-	private void initializePopulation(Population<T> population, RandomGene<T> randomGene2) {
+	private void initializePopulation(Population<T> population) {
 		for (int i = 0; i < population.chromosomes.length; i++) {
 			population.chromosomes[i] = new Chromosome<T>(chromosomeSize);
 			randomGene.initRandomly(population.chromosomes[i]);
@@ -101,13 +101,6 @@ public class GeneticAlgorithm<T> {
 		}
 
 		return mutatePopulation;
-	}
-
-	public void printPopulation(Population<T> population) {
-		for (int i = 0; i < population.chromosomes.length; i++) {
-			Chromosome<T> chromosome = population.chromosomes[i];
-			System.out.println("Chromosome #" + i + ": " + chromosome + " fitness: " + fitness.calcFitness(chromosome));
-		}
 	}
 
 	public static class Builder<T> {
@@ -176,6 +169,11 @@ public class GeneticAlgorithm<T> {
 
 		public Builder<T> withFitness(Fitness<T> fitness) {
 			instance.fitness = fitness;
+			return this;
+		}
+
+		public Builder<T> withOutputPrinter(OutputPrinter<T> outputPrinter) {
+			instance.outputPrinter = outputPrinter;
 			return this;
 		}
 
