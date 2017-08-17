@@ -107,6 +107,42 @@ public class Main {
 
 For more information and to test the algorithm, see the [genetic-algorithm-string-sample](https://github.com/cdr89/genetic-algorithm-template/tree/master/samples/genetic-algorithm-string-sample)  
 
+### Sample run output
+```
+Initialized first generation #0
+Most fit chromosome: 0.0
+Target fitness: 11.0
+Chromosome #0: [F, Y, O, q, r, F, p, N, t, d, W] fitness: 0.0
+Chromosome #1: [k, d, e, m, t, C, p, P, n, Y, l] fitness: 0.0
+Chromosome #2: [e, f, F, J, h, n, e, B, Y, O, c] fitness: 0.0
+Chromosome #3: [a, r, k, Y, w, e, M, W, W, L, P] fitness: 0.0
+Chromosome #4: [b, X, D, R, P, c, A, p, k, A, C] fitness: 0.0
+Chromosome #5: [c, I, x, k, h, m, V, Q, x, N, w] fitness: 0.0
+Chromosome #6: [h, q, e, n, G, n, m, x, y, r, b] fitness: 0.0
+Chromosome #7: [L, Y, e, X, m, T, p, B, P, a, b] fitness: 0.0
+Chromosome #8: [g, i, K, t, W, v, q, i, C, J, n] fitness: 0.0
+Chromosome #9: [G, F, P, J, f, w, S, N, h, U, q] fitness: 0.0
+---------------------------------------------------------------
+
+[...]
+
+Generation #12505
+Most fit chromosome: 11.0
+Target fitness: 11.0
+Chromosome #0: [H, e, l, l, o,  , w, o, r, l, d] fitness: 11.0
+Chromosome #1: [H, n, l, l, o,  , w, o, r, l, d] fitness: 10.0
+Chromosome #2: [H, M, l, l, o,  , w, l, r, v, d] fitness: 8.0
+Chromosome #3: [H, n, l, l, o, L, w, p, I, l, d] fitness: 7.0
+Chromosome #4: [v, n, l, D, F,  , w, o, r, l, d] fitness: 7.0
+Chromosome #5: [H, n, N, R, o, m, w, o, r, m, d] fitness: 6.0
+Chromosome #6: [h, v, o, l, o,  , w, v, r, l, C] fitness: 6.0
+Chromosome #7: [H, E, l, l, I, u, w, o, g, f, d] fitness: 6.0
+Chromosome #8: [V, n, R, l, G,  , b, r, r, l, q] fitness: 4.0
+Chromosome #9: [j, A, l, E, o, Q, w, i, r, g, C] fitness: 4.0
+---------------------------------------------------------------
+Execution time: 00h 00min 04s 4523ms
+```
+
 
 ### References
 [Genetic algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm)  
