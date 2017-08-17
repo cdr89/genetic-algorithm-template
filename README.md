@@ -143,6 +143,9 @@ Chromosome #9: [j, A, l, E, o, Q, w, i, r, g, C] fitness: 4.0
 Execution time: 00h 00min 04s 4523ms
 ```
 
+### Meta genetic algorithm
+If you want to see something of perverse with genetic algorithm, take a look to [meta-genetic-algorithm-string-sample](https://github.com/cdr89/genetic-algorithm-template/tree/master/samples/meta-genetic-algorithm-string-sample): an application of genetic algorithm to itself, in order to determine a solution that minimize the execution time.
+
 
 ### References
 [Genetic algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm)  
