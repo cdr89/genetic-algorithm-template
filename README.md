@@ -4,7 +4,16 @@ A template for genetic algorithm
 ## Quick start
 - Import the genetic-algorithm-template project dependency;
 - Do a Maven "clean package install" to use the .jar dependency in your project or simply package and import as a jar;
+Once installed in your local Maven repository, you can import the dependency:
 
+```xml
+<dependency>
+	<groupId>it.caldesi</groupId>
+	<artifactId>genetic-algorithm-template</artifactId>
+	<version>RELEASE</version>
+</dependency>
+```
+  
 ### Implement a Fitness
 Implement your fitness function extending the class it.caldesi.geneticalgorithm.fitness.Fitness
 
